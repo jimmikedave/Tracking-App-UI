@@ -48,6 +48,6 @@ const signout = (dispatch) => {
 
 export const { Provider, Context } = createDataContext(
     authReducer,
-    { signup, signin, signout },
-    { isSignedIn: false, errorMessage: '' }
+    { signup, signin, signout }, // action functions
+    { isSignedIn: false, errorMessage: '' } // initial state object
 );
