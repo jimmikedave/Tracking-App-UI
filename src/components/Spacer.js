@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 const Spacer = ({ children }) => {
     return (
-        <View styles={styles.spacer}>
+        <View style={styles.spacer}>
             {children}
         </View>
     )
