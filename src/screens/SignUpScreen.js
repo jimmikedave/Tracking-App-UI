@@ -26,7 +26,7 @@ const SignUpScreen = ({ navigation }) => {
 // removes the header from the screen
 SignUpScreen.navigationOptions = () => {
     return {
-      headerShown: false,
+      headerShown: false
     };
   };
 
