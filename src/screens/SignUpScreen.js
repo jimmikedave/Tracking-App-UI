@@ -1,17 +1,12 @@
-import React, { useContext, useEffect } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useContext } from 'react';
+import { View, StyleSheet } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 import { Context as AuthContext } from '../context/AuthContext';
 import AuthForm from '../components/AuthForm';
 import NavLink from '../components/NavLink';
 
 const SignUpScreen = () => {
-    const { state, signup, clearErrorMessage, tryLocalSignin } = useContext(AuthContext);
-
-    // automatically signs in if a token exists
-    useEffect(() => {
-        tryLocalSignin();
-    }, [])
+    const { state, signup, clearErrorMessage} = useContext(AuthContext);
 
     return (
         <View style={styles.container}>
