@@ -14,7 +14,6 @@ const TrackCreateScreen = ({ isFocused }) => {
         addLocation(location, recording)
     }, [recording]); // only give back dif callback function if recording changes
     const [err] = useLocation(isFocused || recording, callback);
-    
     return (
         <SafeAreaView forceInset={{ top: 'always' }}>
             <Text h2>Create a Track</Text>
