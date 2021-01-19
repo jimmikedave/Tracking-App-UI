@@ -31,7 +31,7 @@ export default (shouldTrack, callback) => {
             subscriber.remove();
             setSubscriber(null);
         }
-    }, [shouldTrack]); 
+    }, [shouldTrack, callback]); // new value callback only if state.recording changes
 
     return [err]
 };
