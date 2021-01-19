@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import MapView, { Polyline } from 'react-native-maps';
-
+// shows apple maps for ios, google for android
+// polyline - creates lines on the map
+import MapView, { Polyline } from 'react-native-maps'; 
 const Map = () => {
     let points = [];
     for (let i=0; i<20; i++) {
