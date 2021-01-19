@@ -9,11 +9,11 @@ import useLocation from '../hooks/useLocation';
 import TrackForm from '../components/TrackForm';
 
 const TrackCreateScreen = ({ isFocused }) => {
-    const { state, addLocation } = useContext(LocationContext);
+    const { state: { recording }, addLocation } = useContext(LocationContext);
     const callback = useCallback((location) => {
-        addLocation(location, state.recording)
-    }, [state.recording]); // only give back dif callback function if recording changes
-    const [err] = useLocation(isFocused || state.recording, callback);
+        addLocation(location, recording)
+    }, [recording]); // only give back dif callback function if recording changes
+    const [err] = useLocation(isFocused || recording, callback);
     
     return (
         <SafeAreaView forceInset={{ top: 'always' }}>
